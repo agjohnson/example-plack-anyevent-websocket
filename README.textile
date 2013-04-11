@@ -1,1 +1,26 @@
 h1(#install). Plack, AnyEvent, Redis, and SockJS
+
+h2(#websockets). Websocket implementations
+
+* "SocketIO":socketio
+* "SockJS":sockjs
+** "SockJS Supported Transports":sockjs-support
+** "SockJS Transports":sockjs-transport
+* "EngineIO":engineio
+
+h2(#perl). Perl
+
+* "SockJS":sockjs-pl
+* "PocketIO":pocketio
+
+
+[socketio]http://socket.io
+[sockjs]http://github.com/sockjs/sockjs-client
+[engineio]https://github.com/LearnBoost/engine.io
+
+[sockjs-support]https://github.com/sockjs/sockjs-client#supported-transports-by-browser-html-served-from-http-or-https
+[sockjs-transport]https://github.com/sockjs/sockjs-client#supported-transports-by-name
+
+[sockjs-pl]https://github.com/vti/sockjs-perl
+[pocketio]https://github.com/vti/pocketio.git
+
