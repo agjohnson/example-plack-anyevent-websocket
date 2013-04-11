@@ -1,8 +1,30 @@
 <!doctype html>
 <html>
   <head>
+    <script src="/sockjs-0.3.4.min.js"></script>
   </head>
   <body>
-    Index
+    <div id="in">
+    </div>
+
+    <script>
+var sock = new SockJS('/event');
+
+sock.onopen = function() {
+    console.log('Opened connection');
+    sock.send('New client!');
+};
+sock.onmessage = function(e) {
+    console.log('Received:', e.data);
+    var in_box = document.getElementById('in');
+    var in_more = document.createElement('div');
+    var in_more_txt = document.createTextNode(e.data);
+    in_more.appendChild(in_more_txt);
+    in_box.appendChild(in_more);
+};
+sock.onclose = function() {
+    console.log('Closed connection');
+};
+    </script>
   </body>
 </html>
